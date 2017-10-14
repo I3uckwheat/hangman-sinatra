@@ -6,7 +6,8 @@ class HangmanApi
   end
 
   def make_guess(letters)
-    @hangman.guess_handler(letters.split)
+    puts letters.inspect
+    @hangman.guess_handler(letters)
   end
 
   def hanged_status
@@ -14,7 +15,7 @@ class HangmanApi
   end
 
   def word_status
-    @hangman.correct_guesses.join
+    @hangman.correct_guesses.join(' ')
   end
 
   def win?

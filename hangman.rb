@@ -22,3 +22,8 @@ get '/guess' do
   game.make_guess(params['guess'])
   redirect('/')
 end
+
+get '/new' do
+  session[:game] = HangmanApi.new
+  redirect('/')
+end
