@@ -10,6 +10,7 @@ class Hangman
   def guess_handler(guesses)
     guesses.chars do |letter|
       break if win? || lose?
+      next if @incorrect_guesses.include?(letter)
       correct_guess?(letter) ? update_correct_guesses(letter) : update_incorrect_guesses(letter)
     end
   end

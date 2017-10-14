@@ -18,7 +18,7 @@ class HangmanApi
   end
 
   def incorrect_guesses
-    @hangman.incorrect_guesses
+    @hangman.incorrect_guesses.join
   end
 
   def win?
