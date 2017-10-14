@@ -1,2 +1,2 @@
-require 'hangman.rb'
+require './hangman.rb'
 run Sinatra::Application
