@@ -18,6 +18,10 @@ class HangmanApi
     @hangman.correct_guesses.join(' ')
   end
 
+  def incorrect_guesses
+    @hangman.incorrect_guesses
+  end
+
   def win?
     @hangman.win?
   end
