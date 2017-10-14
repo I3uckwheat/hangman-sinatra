@@ -10,16 +10,18 @@ end
 get '/' do
   session[:game] ||= HangmanApi.new
   game = session[:game]
+  hidden ||= {}
+
   erb :index, locals: {
     word_status: game.word_status,
     hanged_status: game.hanged_status,
-    secret_word: game.show_word
+    secret_word: game.show_word,
+    hidden: hidden
   }
 end
 
 get '/guess' do
-  game = session[:game]
-  game.make_guess(params['guess'])
+  session[:game].make_guess(params['guess'])
   redirect('/')
 end
 
