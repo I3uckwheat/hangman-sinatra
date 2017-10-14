@@ -11,12 +11,16 @@
       <img <%= status[3] %> src='images/right_arm.png' id='right_arm' class='limb'/>
       <img <%= status[4] %> src='images/left_leg.png' id='left_leg' class='limb'/>
       <img <%= status[5] %> src='images/right_leg.png' id='right_leg' class='limb'>
-    </div> 
+    </div>
+    <div id="incorrect_guesses">
+      <p><%= incorrect %></p>
+    </div>
     <p><%= word_status %></p>
     <form action="/guess">
       <input type="text" name="guess"/>
-      <input type="submit" value="Make a Guess!"/>
+      <input type="submit" value="Make a Guess!"/><br>
+      <input type="submit" value="Start a New Game">
     </form>
-    <p hidden><%= secret_word %></p> 
+    <p hidden><%= secret_word %></p>
   </body>
 </html>
