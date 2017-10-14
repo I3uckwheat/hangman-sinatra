@@ -6,7 +6,6 @@ class HangmanApi
   end
 
   def make_guess(letters)
-    puts letters.inspect
     @hangman.guess_handler(letters)
   end
 
