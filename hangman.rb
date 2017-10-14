@@ -15,7 +15,6 @@ get '/' do
   erb :index, locals: {
     word_status: game.word_status,
     incorrect: game.incorrect_guesses,
-    secret_word: game.show_word,
     status: session[:hidden]
   }
 end
@@ -23,7 +22,14 @@ end
 get '/guess' do
   session[:game].make_guess(params['guess'])
   status_setter
-  redirect('/')
+
+  if session[:game].win?
+    redirect('/win')
+  elsif session[:game].lose?
+    redirect('/lose')
+  else
+    redirect('/')
+  end
 end
 
 get '/new' do
@@ -33,11 +39,15 @@ get '/new' do
 end
 
 get '/win' do
-
+  erb :win, locals: {
+    secret_word: session[:game].show_word
+  }
 end
 
 get '/lose' do
-
+  erb :lose, locals: {
+    secret_word: session[:game].show_word
+  }
 end
 
 helpers do
