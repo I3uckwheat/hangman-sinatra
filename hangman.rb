@@ -32,6 +32,14 @@ get '/new' do
   redirect('/')
 end
 
+get '/win' do
+
+end
+
+get '/lose' do
+
+end
+
 helpers do
   def status_setter
     session[:game].hanged_level.times do |num|
