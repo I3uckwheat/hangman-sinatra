@@ -14,6 +14,7 @@ get '/' do
 
   erb :index, locals: {
     word_status: game.word_status,
+    incorrect: game.incorrect_guesses,
     secret_word: game.show_word,
     status: session[:hidden]
   }
