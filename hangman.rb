@@ -8,24 +8,33 @@ configure do
 end
 
 get '/' do
+  session[:hidden] ||= Hash.new('hidden')
   session[:game] ||= HangmanApi.new
   game = session[:game]
-  hidden ||= {}
 
   erb :index, locals: {
     word_status: game.word_status,
-    hanged_status: game.hanged_status,
     secret_word: game.show_word,
-    hidden: hidden
+    status: session[:hidden]
   }
 end
 
 get '/guess' do
   session[:game].make_guess(params['guess'])
+  status_setter
   redirect('/')
 end
 
 get '/new' do
   session[:game] = HangmanApi.new
+  session[:hidden] = Hash.new('hidden')
   redirect('/')
+end
+
+helpers do
+  def status_setter
+    session[:game].hanged_level.times do |num|
+      session[:hidden][num] = ''
+    end
+  end
 end

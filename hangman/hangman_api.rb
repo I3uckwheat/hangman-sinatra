@@ -10,7 +10,7 @@ class HangmanApi
     @hangman.guess_handler(letters)
   end
 
-  def hanged_status
+  def hanged_level
     @hangman.incorrect_guesses.length
   end
 
@@ -19,7 +19,7 @@ class HangmanApi
   end
 
   def win?
-    true
+    @hangman.win?
   end
 
   def lose?

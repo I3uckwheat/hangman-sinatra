@@ -5,18 +5,18 @@
   <body>
     <div id='hanged_man'>
       <img src='images/gallows.png' id='gallows'/>
-      <img src='images/head.png' id='head' class='limb'/>
-      <img src='images/torso.png' id='torso' class='limb'/>
-      <img src='images/left_arm.png' id='left_arm' class='limb'/>
-      <img src='images/right_arm.png' id='right_arm' class='limb'/>
-      <img src='images/left_leg.png' id='left_leg' class='limb'/>
-      <img src='images/right_leg.png' id='right_leg' class='limb'>
+      <img <%= status[0] %> src='images/head.png' id='head' class='limb'/>
+      <img <%= status[1] %> src='images/torso.png' id='torso' class='limb'/>
+      <img <%= status[2] %> src='images/left_arm.png' id='left_arm' class='limb'/>
+      <img <%= status[3] %> src='images/right_arm.png' id='right_arm' class='limb'/>
+      <img <%= status[4] %> src='images/left_leg.png' id='left_leg' class='limb'/>
+      <img <%= status[5] %> src='images/right_leg.png' id='right_leg' class='limb'>
     </div> 
     <p><%= word_status %></p>
     <form action="/guess">
       <input type="text" name="guess"/>
       <input type="submit" value="Make a Guess!"/>
     </form>
-    <p><%= secret_word %></p> 
+    <p hidden><%= secret_word %></p> 
   </body>
 </html>
