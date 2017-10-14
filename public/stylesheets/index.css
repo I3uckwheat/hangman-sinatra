@@ -2,6 +2,45 @@ body {
   background-color: grey;
 }
 
-.gallows {
-  
+#hanged_man {
+  height: 444.5px;
+}
+
+#gallows {
+  height: 100%;
+}
+
+.limb {
+  height: 100px;
+  position: absolute;
+  left: 136px;
+  top: 32px;
+}
+
+#torso {
+  left: 135px;
+  top: 122px;
+  z-index: -1;
+}
+
+#left_arm {
+  top: 133.2px;
+  left: 175px;
+}
+
+#right_arm {
+  left: 121.6px;
+  top: 133.8px;
+}
+
+#left_leg {
+  left: 161px;
+  top: 217px;
+  height: 110px;
+}
+
+#right_leg {
+  height: 110px;
+  left: 135px;
+  top: 217px;
 }

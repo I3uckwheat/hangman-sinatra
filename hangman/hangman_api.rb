@@ -14,7 +14,7 @@ class HangmanApi
   end
 
   def word_status
-    @hangman.correct_guesses
+    @hangman.correct_guesses.join
   end
 
   def win?
@@ -26,6 +26,6 @@ class HangmanApi
   end
 
   def show_word
-    return @hangman.instance_variable_get(:@secret_word) if win? || lose?
+    return @hangman.instance_variable_get(:@secret_word).join if win? || lose?
   end
 end
