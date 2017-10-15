@@ -17,7 +17,7 @@
     </div>
     <p><%= word_status %></p>
     <form action="/guess">
-      <input type="text" name="guess"/>
+      <input type="text" pattern ="[A-Za-z]*" autofocus placeholder = 'A-z' name="guess" autocomplete="off"/>
       <input type="submit" value="Make a Guess!"/><br>
     </form>
     <form action ="/new">
