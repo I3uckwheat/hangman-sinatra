@@ -20,7 +20,7 @@ get '/' do
 end
 
 get '/guess' do
-  session[:game].make_guess(params['guess'])
+  session[:game].make_guess(params['guess'].downcase)
   status_setter
 
   if session[:game].win?
