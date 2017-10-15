@@ -1,10 +1,13 @@
 <html>
   <head>
+    <link rel='stylesheet' type='text/css' href='stylesheets/win.css'/>
   </head>
   <body>
-    <h1>You won! You guessed "<%= secret_word %>" correctly! </h1>
-    <form action="/new">
-      <input type="submit" value="New Game!">
-    </form>
+    <div class="message">
+     <h1>You won! You guessed "<%= secret_word %>" correctly! </h1>
+     <form action="/new">
+       <input type="submit" value="New Game!">
+     </form>
+    </div>
   </body>
 </html>

@@ -1,9 +1,11 @@
 <html>
   <head>
-  <link rel='stylesheet' type='text/css' href='stylesheets/index.css'/>
+    <link rel='stylesheet' type='text/css' href='stylesheets/lose.css'/>
   </head>
   <body>
-    <h1>You lost! Your word was: "<%= secret_word %>"</h1>
-    <form action = "/new"><input type="submit" value="New game!"></form>
+    <h1>You lost! The word was: "<%= secret_word %>"</h1>
+    <form action="/new">
+      <input type="submit" value="New Game!">
+    </form>
   </body>
 </html>
