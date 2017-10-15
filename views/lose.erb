@@ -3,9 +3,19 @@
     <link rel='stylesheet' type='text/css' href='stylesheets/lose.css'/>
   </head>
   <body>
-    <h1>You lost! The word was: "<%= secret_word %>"</h1>
-    <form action="/new">
-      <input type="submit" value="New Game!">
-    </form>
+    <div id="gallows">
+      <div id="hanged_man">
+        <div class='head'></div>
+        <div class='body'></div>
+        <div class='arms'></div>
+        <div class='legs'></div>
+      </div>
+    </div>
+    <div>
+      <h1>You lost! The word was: "<%= secret_word %>"</h1>
+      <form action="/new">
+       <input type="submit" value="New Game!">
+      </form>
+    </div>
   </body>
 </html>

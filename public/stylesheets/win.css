@@ -2,45 +2,12 @@ body {
   background-color: grey;
 }
 
-#hanged_man {
-  height: 444.5px;
-}
-
 #gallows {
-  height: 100%;
-}
-
-.limb {
-  height: 100px;
-  position: absolute;
-  left: 136px;
-  top: 32px;
-}
-
-#torso {
-  left: 135px;
-  top: 122px;
-  z-index: -1;
-}
-
-#left_arm {
-  top: 133.2px;
-  left: 175px;
-}
-
-#right_arm {
-  left: 121.6px;
-  top: 133.8px;
-}
-
-#left_leg {
-  left: 161px;
-  top: 217px;
-  height: 110px;
-}
-
-#right_leg {
-  height: 110px;
-  left: 135px;
-  top: 217px;
+  height: 400px;
+  background-image: url("../images/running.png"), url("../images/gallows.png");
+  background-position: right top;
+  background-origin: content-box;
+  background-position: 450px 150px, 0px center;
+  background-size: 140px, 300px;
+  background-repeat: no-repeat;
 }
